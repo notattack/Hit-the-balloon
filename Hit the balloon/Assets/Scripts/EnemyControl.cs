@@ -57,6 +57,7 @@ public class EnemyControl : MonoBehaviour
     {
         if (Hp <= 0)
         {
+            AudioManager.Instance.PlaySe("die.mp3");
             Destroy(gameObject);
             Text.instance.AddScore();
         }
